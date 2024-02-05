@@ -1,0 +1,15 @@
+$grid-container-width: 400px;
+$grid-width: 40px;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, $grid-width);
+    max-width: $grid-container-width;
+    margin: 0 auto;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-column: span $i;
+    }
+}
